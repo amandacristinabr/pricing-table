@@ -1,36 +1,49 @@
+html {
+  font-size: 62%;
+}
+
+:root {
+  --yellow: #ffcc29;
+  --blue: #1d539e;
+  --gray: #828799;
+  --page-background: #f9fbfc;
+}
+
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
   background: #e5e5e5;
+  height: 100vh;
+  font-family: 'Open Sans';
 }
 
-header {
+.header {
   background: #1d539e;
   width: 100%;
   height: 450px;
 
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-header h1 {
-  font-family: 'Open Sans';
+.header h1 {
   font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
+  font-weight: 400;
+  font-size: 4.8rem;
   line-height: 65px;
   color: #ffffff;
 }
 
-header h3 {
-  font-family: 'Open Sans';
+.header span {
+  color: #ffff;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 25px;
   text-align: center;
   color: #ffffff;
@@ -39,12 +52,69 @@ header h3 {
 main {
   display: flex;
   justify-content: center;
-  margin-top: -110px;
-  gap: 20px;
+  gap: 2.5rem;
 }
 
-.card {
-  width: 355px;
+.card-simple {
+  margin-top: -8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 355px;
   height: 470px;
+  padding: 31px;
   background: #ffffff;
+  border: 1px solid var(--blue);
+  box-shadow: 0px 1px 2px rgba(142, 150, 185, 0.25);
+  border-radius: 8px;
+  border: 0;
+}
+
+.card-basic {
+  margin-top: -9%;
+}
+
+.card-basic > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 355px;
+  width: 100%;
+  height: 480px;
+  padding: 31px;
+  background: #ffffff;
+  border: 1px solid var(--blue);
+  box-shadow: 0px 1px 2px rgba(142, 150, 185, 0.25);
+  border-radius: 0 0 8px 8px;
+  border: 0;
+}
+.header-card {
+  width: 100%;
+  height: 76px;
+  background: #ffcc29;
+  box-shadow: 0px 1px 2px rgba(142, 150, 185, 0.25);
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-card h2 {
+  margin-left: 30px;
+  color: #1d539e;
+}
+
+.header-card button {
+  color: #ffffff;
+  margin-right: 10px;
+  width: 94px;
+  height: 32px;
+  border: 0;
+  background: #1d539e;
+  border-radius: 40px;
+  cursor: pointer;
+  opacity: 90%;
+}
+.header-card button:hover {
+  opacity: 100%;
 }
